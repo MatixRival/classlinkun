@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+* {
+    font-family: 'Ubuntu Mono', monospace;
+    letter-spacing: 2px;
+    background-color: none;
+}
+
+
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    min-height: 14vh;
+}
+
+.btn-1 {
+    width: 250px;
+    height: 80px;
+    border: none;
+    color: #b4e852;
+    border-radius: 4px;
+    transition: ease-out 0.3s;
+    background-color: #1a1a1b;
+    font-size: 2rem;
+    outline: none;
+    border: 3px solid #b4e852;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-1:hover {
+    cursor: pointer;
+    color: #1a1a1b;
+}
+
+.btn-1::before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #b4e852;
+}
+
+.btn-1:hover::before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+}
+
+
+
+
+.clock {
+    background: #534f4f;
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .clock-time,
+  .clock-ampm {
+    font-family: 'Nova Square', cursive;
+    font-size: 30px;
+    color: #b4e852;
+  }
+  
+  .clock-time {
+    font-size: 48px;
+  }
+
+.scroll-down {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #1a1a1b;
+    color: #b4e852;
+    outline: none;
+    cursor: pointer;
+  }
+  .scroll-down::before,
+  .scroll-down::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border: 2px solid #b4e852;
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite;
+  }
+  .scroll-down::before {
+    top: 30%;
+    animation-delay: 0.3s;
+    /* animation: scroll-down 1s ease-in-out infinite; */
+  }
+  
+  @keyframes scroll-down {
+    0% {
+      /* top:20%; */
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    100% {
+      top: 90%;
+      opacity: 0;
+    }
+  }
+  
